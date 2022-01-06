@@ -12,10 +12,10 @@ use \yii\helpers\Html;
 
 <?= Html::label('Cidade'); ?>
 <?= Html::dropDownList('cidades', '' , [
-    1 => 'São Paulo',
-    2 => 'Belo Horizonte',
-    3 => 'Critiba',
-    4 => 'Caruaru'],
+    'São Paulo' => 'São Paulo',
+    'Belo Horizonte' => 'Belo Horizonte',
+    'Critiba' => 'Critiba',
+    'Caruaru' => 'Caruaru'],
     ['prompt' => 'Selecione', 'class'=> 'form-control']
     ); ?>
 <?= Html::button('Enviar', ['type' => 'submit', 'class' => 'btn btn-primary mt-2']); ?>
