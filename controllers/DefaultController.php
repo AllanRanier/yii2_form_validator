@@ -2,7 +2,9 @@
 
 namespace app\controllers;
 
+use app\models\forms\ProdutoForm;
 use Yii;
+use yii\helpers\VarDumper;
 
 class DefaultController extends \yii\web\Controller
 {
@@ -17,9 +19,17 @@ class DefaultController extends \yii\web\Controller
             'nome' => $nome,
             'cidade' => $cidade
         ]);
-
     }
         return $this->render('index');
+    }
+
+    public function actionProduto()
+    {
+        $form = new ProdutoForm();
+
+        return $this->render('produto',[
+            'model' => $form,
+        ]);
     }
 
 }
